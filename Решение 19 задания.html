@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+<title> Решение 19 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black"background="синий.jpg"
+		>
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 19 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k">
+<tr><td><font size=4 face="arial">Два игрока, Петя и Ваня, играют в следующую игру. Перед игроками лежат две кучи камней. Игроки ходят по очереди, первый ход делает Петя. За один ход игрок может добавить в одну из куч (по своему выбору) <b>один</b> камень или увеличить количество камней в куче в <b>два раза</b>. Игра завершается в тот момент, когда суммарное количество камней в кучах становится не менее 77. Победителем считается игрок, сделавший последний ход, т. е. первым получивший такую позицию, при которой в кучах будет 77 или больше камней. В начальный момент в первой куче было семь камней, во второй куче — S камней; 1 ≤ S ≤ 69. Известно, что Ваня выиграл своим первым ходом после неудачного первого хода Пети. Укажите минимальное значение S, когда такая ситуация возможна</font></td></table><br><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1 >
+<li>Открываем Excel и вносим необходимые нам данные в следующем виде: А1 - минимальное суммарное значение камней для победы, А2 - кол-во камней в первой куче, B2 - кол-во камней во второй куче(S)<br><img src="скрин55.png" width=30% onclick="this.style.width='60%'" onmouseout="this.style.width='30%'"></li><br>
+<li>Далее нам нужно заполнить "каркас" таблицы следующим образом. Необходимо объединить ячейку "Петя(1 ход)".<br><img src="скрин56.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь нужно заполнить все варианты развития событий, включая во внимание все возможные ходы: <ol type=1><li>+1</li><li>*2</li></ol> Делать это нужно при помощи команд. Для наглядности лучше заменить S на любое число, например 10. В своем первом ходу Петя может увеличить первую кучу на 1, вторая же куча останется нетронутой. Заполнять ячейки лучше всего командами<br><table width=100% border=0><tr><td><img src="скрин57.png" width=95% ></td><td><img src="скрин58.png" width=95% align=right></td></table><br><br>Нам нужно добиться максимального количества камней в кучах, и поэтому для победы за 1 ход Ване нужно увеличить большую кучу в 2 раза, сделаем это командой<br><img src="скрин59.png" width=30% onclick="this.style.width='60%'" onmouseout="this.style.width='30%'"><br><br>В итоге будет примерно так<br><img src="скрин60.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее необходимо заполнить остальные варианты ходов Пети и растянуть команду для хода Вани на эти варианты. Получится примерно так<br><img src="скрин61.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь нам нужно выделить цветом те ячейки, в которых Ваня побеждает. Сделать это можно таким образом: Кликаем на ячейку E2(ход Вани), наживаем на "Условное форматирование"<br><img src="скрин62.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Далее переходим в "Правила выделения ячеек" - "Другие правила"<br><img src="скрин63.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Теперь надо выбрать "больше или равно" и вместо пустой ячейки значения кликнуть на ячейку А1 или просто написать число 77<br><img src="скрин64.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Далее переходим в формат - заливка и выбираем любой цвет. Нужно растянуть эту команду на всю таблицу.</li><br>
+<li>Теперь нам нужно менять значения S до того момента, как мы не увидим залёный цвет. Если вы изначально видите зелёный цвет, то нужно менять значения в меньшую сторону, но чтобы зелёный цвет оставался, так как нам нужно найти именно минимальное значение. У меня самое минимальное значение с которого отображается зелёный цвет это 18<br><img src="скрин65.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Записываем ответ</li></ol>
+<font size=5 face="arial"><p><i>Ответ:18</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №2</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k">
+<tr><td><font size=4 face="arial">Два игрока, Петя и Ваня, играют в следующую игру. Перед игроками лежит куча камней. Игроки ходят по очереди, первый ход делает Петя. За один ход игрок может добавить в кучу <b>один</b> или <b>четыре</b> камня либо увеличить количество камней в куче в <b>пять раз</b>. Игра завершается в тот момент, когда количество камней в куче становится не менее 68. Победителем считается игрок, сделавший последний ход, т. е. первым получивший кучу, в которой будет 68 или больше камней. В начальный момент в куче было S камней; 1 ≤ S ≤ 67. Известно, что Ваня выиграл своим первым ходом после неудачного первого хода Пети. Укажите минимальное значение S, когда такая ситуация возможна.</font></td></table><br><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1 >
+<li>В этом варианте задания мы уже имеем дело не с двумя, а с одной кучей, но алгоритм остается тем же. Заполняем таблицу таким образом: А1 - минимальное суммарное значение камней для победы, А2 - кол-во камней в куче S(для наглядности можно взять любое число, например 10)<br><img src="скрин66.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Затем необходимо заполнить все варианты событий, включая во внимание все возможные ходы: <ol type=1><li>+1</li><li>+4</li><li>*5</li></ol> Заполнять нужно формулами.<br><img src="скрин67.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее нужно сделать такой ход у Вани, чтобы получить как можно большее число. Для этого нужно умножить количесвто камней в куче в 5 раз. Делаем все через формулы<br><img src="скрин68.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь нужно выделить цветом те ячейки, которые больше 68. Сделать это можно при помощи того же условного форматирования<br><img src="скрин69.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь просто перебираем число S, находя самое минимальное значение при наличии зелёного цвета. <br><img src="скрин70.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Получилось число 3, записываем ответ</li></ol>
+<font size=5 face="arial"><p><i>Ответ:3</i></p></font><br>
+<center><video controls src="видео 1.mp4" width=80%></video></center>
+
+
+
+
+
+
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 19.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

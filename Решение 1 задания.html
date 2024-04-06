@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> Решение 1 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black" background="синий.jpg">
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 1 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k">
+<tr><td><font size=4 face="arial">На рисунке слева изображена схема дорог Н-ского района, в таблице звёздочкой обозначено наличие дороги из одного населённого пункта в другой. Отсутствие звёздочки означает, что такой дороги нет. Каждому населённому пункту на схеме соответствует его номер в таблице, но неизвестно, какой именно номер. Определите, какие номера населённых пунктов в таблице могут соответствовать населённым пунктам A и G на схеме. В ответе запишите эти два номера в возрастающем порядке без пробелов и знаков препинания.</font></td></table><br><br>
+<table rules=none border=0 width=80%>
+<tr><td><img src="01.png" width=60%></td><td><img src="001.png" width=100%></td></table><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Откроем Excel и перепишем данную таблицу(по желанию)<br><img src="скрин1.png"width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Затем сделаем вспомогательную таблицу, куда мы будем заносить данные про точки. Находим особые точки: F(3 строка), C(4 или 5 строка) и E(5 или 4 строка). Пусть C - 4 строка , а E - 5 строка.<br><img src="скрин2.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее, зная информацию про точки F и C, мы можем найти точку D - 1 строка. Таким же образом мы можем найти точки G, A, B, опирась на информацию из двух таблиц. Получается, что G - 7 строка, A - 6 строка, B - 2 строка.<br><img src="скрин3.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Нам нужна была информация про точки A(6 строка) и G(7 строка), записываем ответ.</li></ol>
+<font size=5 face="arial"><p><i>Ответ:67</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №2</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k">
+<tr><td><font size=4 face="arial">На рисунке справа схема дорог Н-ского района изображена в виде графа, в таблице содержатся сведения о длинах этих дорог (в километрах). Так как таблицу и схему рисовали независимо друг от друга, то нумерация населённых пунктов в таблице никак не связана с буквенными обозначениями на графе. Определите, какова длина дороги из пункта В в пункт Е. В ответе запишите целое число – так, как оно указано в таблице.</font></td></table><br><br>
+<table rules=none border=0 width=80%>
+<tr><td><img src="02.png" width=60%></td><td><img src="002.png" width=100%></td></table><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Откроем Excel и перепишем данную таблицу(по желанию)<br><img src="скрин4.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Затем сделаем вспомогательную таблицу, куда мы будем заносить данные про точки. Находим особые точки: В(П6), Е(П4) и Г(П2).<br><img src="скрин5.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее, зная информацию про точки Е и Г, мы можем найти точку К - П1. Таким же образом мы можем найти точку Д, опирась на информацию из двух таблиц. Получается, что Д - П7.</li><br>
+<li>Остаётся 2 точки: А и Б. они идентичны, так что пусть А - П3, Б - П5.<br><img src="скрин6.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Нам нужна была информация про расстояние из точки В в точку Е, т.е. из П6 в П4, записываем ответ.</li></ol>
+<font size=5 face="arial"><p><i>Ответ:20</i></p></font><br>
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 1.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

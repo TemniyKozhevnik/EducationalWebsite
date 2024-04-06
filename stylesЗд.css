@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+body {background: #fff;
+        color: #000;
+        margin: 0;
+        padding: 0;}
+		
+#шапка {background-size: cover;
+  background-image: url("типофон.png");
+        width: 100%;
+
+		height: 7%;
+}
+#фон {background: #009090;
+      width: 20%; float:left;
+	  height: 5%; position: fixed; vertical-align: center;text-align: center;
+}
+#основное {
+           width: 80%;
+		   text-align: center;
+		   height: 95%;
+		   float: right;position: fixed; left: 20%;}
+::-webkit-scrollbar {
+	width: 0px;}
+#левая {background: #42aaff;
+        float: left;
+        width: 20%;
+		position: fixed;top: 12%;overflow-y: scroll;
+  }
+#левая::-webkit-scrollbar {
+	width: 15px;background-color: #ffffff;}
+
+</body>
+</html>

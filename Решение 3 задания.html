@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Решение 3 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black" background="синий.jpg">
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 3 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">В файле приведён фрагмент базы данных «Продукты» о поставках товаров в магазины районов города. База данных состоит из трёх таблиц. Таблица «Движение товаров» содержит записи о поставках товаров в магазины в течение первой декады июня 2021 г., а также информацию о проданных товарах. Поле Тип операции содержит значение Поступление или Продажа, а в соответствующее поле Количество упаковок, шт. занесена информация о том, сколько упаковок товара поступило в магазин или было продано в течение дня. Таблица «Товар» содержит информацию об основных характеристиках каждого товара. Таблица «Магазин» содержит информацию о местонахождении магазинов. <br>Используя информацию из приведённой базы данных, определите на сколько увеличилось количество упаковок яиц диетических, имеющихся в наличии в магазинах Заречного района, за период с 1 по 10 июня включительно. В ответе запишите только число.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/get_file?id=91368"><center><font size=4 face="arial" color="blue">Скачать файл</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Чтобы решить эту задачу максимально точно, нам понадобится связать некоторые элементы из наших трёх таблиц. Нас интересуют лишь магазины заречного района, поэтому в третьей таблице ставим фильтр на этот район: Сортировка и фильтр→Фильтр→Нажимаем на столбец "Район"→Ставим галочку на "Заречный" и убираем другие галочки.<br><img src="скрин160.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Нам необходимо связать ID магазина в первой и в третьей таблице, для этого используем комаду ВПР.<br><img src="скрин161.png" width=40% onclick="this.style.width='80%'" onmouseout="this.style.width='40%'"><br><br>"C2"-ячейка первой таблицы, которую связываем с третьей таблицей;<br>"Магазин!A:D"-название листа третьей таблицы!диапазон этой таблицы;<br>"2"-номер столбца третьей таблицы, который нужно связать с первой (столбец B);<br>"Ложь"-условие, при котором не берётся ничего лишнего.<br><br>Растягиваем формулу на протяжении всей таблицы.<br><img src="скрин162.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь необходимо связать ID товара первой таблицы и ID товара второй таблицы. Используем так же команду ВПР.<br><img src="скрин164.png" width=40% onclick="this.style.width='80%'" onmouseout="this.style.width='40%'"><br><br>"D2"-ячейка первой таблицы, которую связываем со второй таблицей;<br>"Товар!A:F"-название листа второй таблицы!диапазон этой таблицы;<br>"3"-номер столбца второй таблицы, который нужно связать с первой (столбец C);<br>"Ложь"-условие, при котором не берётся ничего лишнего. Здесь всё так же, как и с первым случаем.<br><br> Теперь растягиваем формулу на всю таблицу.<br><img src="скрин165.png" width=80% onclick="this.style.width='100%'" onmouseout="this.style.width='80%'"></li><br>
+<li>Теперь нам остаётся поработать с фильтром. Нас просят выбрать дату с 1 по 10 июня, магазины заречного района и яйца диетические. Ставим галочки в соответствующих ячейках и получаем подобную таблицу<br><img src="скрин166.png" width=80% onclick="this.style.width='100%'" onmouseout="this.style.width='80%'"><br><br>Нас просят найти разность между количеством полученных товаров и количеством проданных. Для этого необходимо перенести получившуюся таблицу на отдельный лист, иначе команда СУММ будет считать элементы всей таблицы, а не получившейся. Также советую сделать подобный фильтр на столбец с операцией.<br><img src="скрин167.png" width=80% onclick="this.style.width='100%'" onmouseout="this.style.width='80%'"><br><br>Теперь просто считаем сумму полученных и вычитаем из неё сумму проданных, и получаем ответ.<br><img src="скрин168.png" width=80% onclick="this.style.width='100%'" onmouseout="this.style.width='80%'"></li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 966</i></p></font><br>
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 3.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

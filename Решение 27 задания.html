@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> Решение 27 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black"background="синий.jpg"
+		>
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 27 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Имеется набор данных, состоящий из пар положительных целых чисел. Необходимо выбрать из каждой пары ровно одно число так, чтобы сумма всех выбранных чисел не делилась на 3 и при этом была максимально возможной. Гарантируется, что искомую сумму получить можно. Программа должна напечатать одно число — максимально возможную сумму, соответствующую условиям задачи.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/doc/inf/zadanie27/27-A_demo.txt"><center><font size=4 face="arial" color="blue">Скачать файл А</font></center></a><br>
+<a href="https://inf-ege.sdamgia.ru/doc/inf/zadanie27/27-B_demo.txt"><center><font size=4 face="arial" color="blue">Скачать файл Б</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Копируем данные из файла A и вставляем в Excel. <br><img src="скрин119.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Чтобы всё вставилось нормально, нужно выделить весь текст, зайти в Данные→Текст по столбцам→Далее→ставим галочку на пункте "пробел"→Далее→Готово. <br><img src="скрин120.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"> </li><br>
+<li>Теперь нам нужно найти максимальное число из каждой пары с помощью команды МАКС <br><img src="скрин121.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее находим сумму всех максимальных чисел <br><img src="скрин122.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь нам нужно проверить, делится ли эта сумма на 3. Делать это надо через команду ЕСЛИ и ОСТАТ <br><img src="скрин123.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Единицу выводит, если число не делится на 3, ноль, если делится. У нас максимальное число делится на 3, поэтому сразу же записать ответ мы не сможем.</li><br>
+<li>Нам потребуется ввести новую колонку, в которую мы будем записывать разницу между парами чисел. Идея состоит в том, чтобы заменить одно число на другое так, чтобы в итоге сумма на 3 не делилась и чтобы разница между ними была минимальной. Найдём разницу с помощью этой несложной команды<br><img src="скрин124.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Для удобства необходимо отсортировать всю таблицу по возрастанию разницы. Для этого выделяем всю таблицу, кроме первой строки→Данные→Сортировка→Сортировать по→Столбец С(в моём случае столбец С, так как разница записана именно в нём)→Порядок→По возрастанию.<br><img src="скрин125.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Мы видим, что самая минимальная разница на 3 не делится (число делится на 3 тогда, когда сумма цифр этого числа делится на 3), так что мы можем заменить число 5841 на более меньшее число 5627. Менять мы его будем в колонке "макс".<br><img src="скрин126.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Мы видим, что теперь сумма на 3 не делится (1), так что 127127 - наш первый ответ</li><br>
+<li>Теперь работаем с файлом Б. В нём нужно сделать точно такие же действия. В результате у нас получится такая таблица <br><img src="скрин127.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Здесь мы так же не можем записать ответ сразу, так что добавляем колонку с разницой<br><img src="скрин128.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>И сортируем таблицу по убыванию разницы тем же методом<br><img src="скрин129.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Мы видим, что минимальная разница равна нулю. Она нам не подходит, так как если заменить число таким же числом, то ничего не получится. Следующие разницы деляется на 3 (3,6,9,12,15), так что они тоже никакой роли не играют. Минимальная разница, которая не делится на 3, это число 16. Меняем число 8692 на 8676 и видим, что теперь сумма на 3 не делится (1), так что 399762080 - наш второй ответ <br><img src="скрин130.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"> </li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 127127 399762080</i></p></font><br>
+
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 27.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

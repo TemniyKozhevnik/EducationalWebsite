@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+<title> Решение 16 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black" background="синий.jpg">
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 16 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Алгоритм вычисления значения функции F(n), где n – натуральное число, задан следующими соотношениями:<BR>F(1) = 1<BR>F(n) = F(n–1) * n, при n >1<BR>Чему равно значение функции F(5)? В ответе запишите только натуральное число.</font></td></table><br><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<LI>Для начала нужно будет открыть Excel и построить подобную таблицу.<br><img src="скрин169.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br>Заполняем n до того значения, которого нам нужно найти в задании.</li><br>
+<LI>Теперь нужно внести в таблицу то, что нам дано. В данном случае дано F(1).<br><img src="скрин170.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br></li><br>
+<LI>Если n>1, то F(n)=F(n-1)*n. Нам нужно ввести такую команду, которая будет предыдущее F(n-1) умножать на n, эта команда будет выглядеть так<br><img src="скрин171.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br>Теперь просто растяниваем команду до предельного значения n.<br><img src="скрин172.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br>Нужное нам значение - F(5), записываем ответ.</li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 120</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №2</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Алгоритм вычисления значения функции F(n) и G(n), где n – натуральное число, задан следующими соотношениями:<BR>F(1) = 0<BR>F(n) = F(n–1) + n, при n >1<BR>G(1) = 1<BR>G(n) = G(n–1) * n, при n >1<BR>Чему равно значение функции F(5) + G(5)?<BR>В ответе запишите только натуральное число.</font></td></table><br><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<LI>Эта задача отличается тем, что у нас появлется вторая функция G, но принцип решения остается таким же. Заполняем таблицу.<br><img src="скрин173.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br></li><br>
+<LI>Если n>1, то F(n)=F(n–1)+n. Нужно ввести команду, которая будет к предыдущему F(n-1) прибавлять n, вводим и растягиваем эту команду.<br><img src="скрин174.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br></li><br>
+<LI>Если n>1, то G(n)=G(n–1)*n. Аналогично вводим команду, которая предыдущее G(n-1) будет умножать на n, вводим и растягиваем эту команду.<br><img src="скрин175.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br></li><br>
+<LI>В ответ нам нужно записать F(5)+G(5), то есть 14+120, что равно 134. Записываем ответ.</li>
+</ol>
+<font size=5 face="arial"><p><i>Ответ: 134</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №3</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Алгоритм вычисления функции F(n), где n – натуральное число, задан следующими соотношениями:<BR>F(n)=1,  при n<2,<BR>F(n)=F(n/3)–1, когда n>=2 и делится на 3,<BR>F(n)=F(n–1)+7 , когда n>=2 и не делится на 3.<BR>Назовите количество значений n на отрезке [1;100000], для которых F(n) равно 35.
+</font></td></table><br><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<LI>Заполняем таблицу, где n будет в пределах от 1 до 100000. Чтобы это сделать быстро: Заполнить→Прогрессия→По столбцам→предельное значение:100000. Вводим известные данные.<br><img src="скрин176.png" width=40% onclick="this.style.width='70%'" onmouseout="this.style.width='40%'"><br><br></li><br>
+<LI>Проверять, делится ли n на 3, мы будем через эту команду: ОСТАТ(n;3). Действие F(n/3) мы будет записывать следующим образом через команду СМЕЩ("Столбец с n";-("столбец с n"-("столбец с n"/3));1). Общая команда будет выглядеть следующим образом:<br><img src="скрин177.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Растягиваем эту команду на весь лист.</li><br>
+<LI>Теперь нам осталось посчитать количество F(n), которые равны 35. Для этого используем команду СЧЁТЕСЛИ:<br><img src="скрин178.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Записываем ответ.</li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 1228</i></p></font><br>
+<center><video controls src="видео 2.mp4" width=80%></video></center>
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 16.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

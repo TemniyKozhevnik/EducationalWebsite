@@ -1,0 +1,87 @@
+<html>
+<head>
+<title> Решение 18 задания </title>
+<link rel="stylesheet" type="text/css" href="stylesРеш.css">
+<style>
+
+a {text-decoration: none;}
+html {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+body {background-size: cover;
+        margin: 0;
+        padding: 0;}
+		
+		.v{padding-top: 10%;}
+.f{padding-bottom: 20%;} 
+.n{vertical-align: top;}
+.g{user-select: none; text-decoration: none; outline: none; background-color: #ffa500; padding: 7 10}
+.k{text-align:justify;}
+</style>
+</head>
+<body link="black" alink="black" vlink="black" background="синий.jpg">
+<div id="шапка">
+<center><table rules=none border=0 height=100% width=100%></center> 
+<tr>
+<td width=10%><a href="Самая главная 1.html"><img src="excel.png" width=30% align=left class="z"></a></td>
+<td width=80%><center><font size=5 face="arial" class="k"><b>Решение 18 задания КЕГЭ по информатике</b></font></center></td>
+<td width=10%></td>
+</table>
+</div>
+	  <div id="основное" >
+     <center><table bgcolor="white" cellpadding=50% class="x" border=0 rules=none width=45% height=100%></center>
+<tr>
+<td style="vertical-align: top"><font size=5 face="arial"><center><p><b>Задание №1</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k">
+<tr><td><font size=4 face="arial">Квадрат разлинован на N×N клеток (1 < N < 17). Исполнитель Робот может перемещаться по клеткам, выполняя за одно перемещение одну из двух команд: вправо или вниз. По команде вправо Робот перемещается в соседнюю правую клетку, по команде вниз — в соседнюю нижнюю. При попытке выхода за границу квадрата Робот разрушается. Перед каждым запуском Робота в каждой клетке квадрата лежит монета достоинством от 1 до 100. Посетив клетку, Робот забирает монету с собой; это также относится к начальной и конечной клетке маршрута Робота. Откройте файл. Определите максимальную и минимальную денежную сумму, которую может собрать Робот, пройдя из левой верхней клетки в правую нижнюю. В ответ запишите два числа друг за другом без разделительных знаков — сначала максимальную сумму, затем минимальную. Исходные данные представляют собой электронную таблицу размером N×N, каждая ячейка которой соответствует клетке квадрата.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/doc/inf/zadanie18/18_demo.xlsx"><center><font size=4 face="arial" color="blue">Скачать файл</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Для начала посмотрим на Excel документ, мы видим числовую таблицу. Для решения подобной задачи необходимо скопировать эту самую таблицу на несколько ячеек ниже, залить всё цветом, а потом удалить все числовые значения в этой скопированной таблице.<br><img src="скрин131.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>В результате должен получиться подобный макет.<br><img src="скрин132.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>По условию задачи, мы должны идти с верхнего левого края к правому нижнему. наносим стартовое значение на макет.<br><img src="скрин133.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></</li><br>
+<li>Теперь нужно в правую ячейку написать сумму стартового числа и числа, которое находится справа от стартового числа на оригинальной таблице. При этом важно в команде брать стартовое число с макета, а правое с оригинала.<br><img src="скрин134.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>теперь копируем эту формулу и растягиваем до правого края макета.<br><img src="скрин135.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>В результате получится сумма ряда чисел от начала до правого края. </li><br>
+<li>Теперь то же самое нужно сделать и с нижними значениями.<br><img src="скрин136.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>В вопросе задачи видим, что нам нужно найти максимальное и минимальное значение денежной суммы. Для этого на диагональной ячейке прописываем эту команду.<br><img src="скрин136.1.png" width=30% onclick="this.style.width='60%'" onmouseout="this.style.width='30%'"><br><br><br><img src="скрин137.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Далее копируем эту команду и вставляем ее на весь оставшийся макет.<br><img src="скрин138.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Наш первый ответ - это нижнее крайне правое число. Эта позиция и является нашим финишем по условию задачи.</li><br>
+<li>Чтобы найти минимальное число, нам нужно всего лишь заменить команду МАКС на МИН и не забыть заново растянуть новую команду на весь макет.<br><img src="скрин139.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Наш второй ответ находится так же в правой нижней ячейке. Записываем ответ.</li><br>
+<font size=5 face="arial"><p><i>Ответ: 1204 502</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №2</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Дана последовательность вещественных чисел. Из неё необходимо выбрать несколько подряд идущих чисел так, чтобы каждое следующее число было меньше предыдущего. Какую максимальную сумму могут иметь выбранные числа? В ответе запишите только целую часть максимально возможной суммы. Исходная последовательность записана в виде одного столбца электронной таблицы.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/get_file?id=76811"><center><font size=4 face="arial" color="blue">Скачать файл</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Открываем файл и переносим самое первое число в ячейку B1. <br><img src="скрин140.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>По условию задачи, нужно найти такой ряд чисел, в котором каждое последующее число меньше предыдущего. Пишем соответствующую команду ЕСЛИ.<br><img src="скрин141.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее растягиваем эту команду на весь ряд <br><img src="скрин142.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Теперь нужно найти наибольшее число из нового ряда. Делаем это с помощью команды МАКС.<br><img src="скрин143.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Получилось число 358,76. В ответ записываем только целую часть.</li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 358</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №3</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Дана последовательность вещественных чисел. Из неё необходимо выбрать несколько подряд идущих чисел так, чтобы каждое следующее число отличалось от предыдущего не более чем на 10. Какую максимальную сумму могут иметь выбранные числа? В ответе запишите только целую часть максимально возможной суммы. Исходная последовательность записана в виде одного столбца электронной таблицы.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/get_file?id=79000"><center><font size=4 face="arial" color="blue">Скачать файл</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Открываем файл и переносим самое первое число в ячейку B1. <br><img src="скрин144.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>По условию задачи, нужно найти такой ряд чисел, в котором каждое последующее число отличается от предыдущего не более чем на 10. Нам не сказано, какое число должно быть больше, поэтому используем команду модуля ABS. Также нам нужно учитывать то, что в таблице присутствуют отрицательные числа, которые будут мешать найти максимальную сумму, поэтому их не нужно учитывать. Пишем соответствующую команду ЕСЛИ.<br><img src="скрин145.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее растягиваем эту команду на весь ряд <br><img src="скрин146.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Теперь нужно найти наибольшее число из нового ряда. Делаем это с помощью команды МАКС.<br><img src="скрин147.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Получилось число 80,76. В ответ записываем только целую часть.</li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 80</i></p></font><br>
+<font size=5 face="arial"><center><p><b>Задание №4</b></p></center></font>
+<table border=1 rules=none cellpadding=7% class="k"><tr><td><font size=4 face="arial">Дан квадрат 15 × 15 клеток, в каждой клетке которого записано целое число. В левом верхнем углу квадрата стоит ладья. За один ход ладья может переместиться в пределах квадрата на любое количество клеток вправо или вниз (влево и вверх ладья ходить не может). Необходимо переместить ладью в правый нижний угол так, чтобы сумма чисел в клетках, в которых ладья останавливалась (включая начальную и конечную), была максимальной. В ответе запишите максимально возможную сумму.</font></td></table><br><br>
+<a href="https://inf-ege.sdamgia.ru/get_file?id=79043"><center><font size=4 face="arial" color="blue">Скачать файл</font></center></a><br>
+<font size=5 face="arial"><p><i>Решение:</i></p></font>
+<font size=4 face="arial" style="line-height:135%;">
+<ol start=1 type=1>
+<li>Делаем макет таблицы. Ладья в начальной позиции находится в верхнем левом углу, так что копируем ячейку A1 в A17.<br><img src="скрин148.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"> </li><br>
+<li>В отличии от самой первой задачи, ладья может ходить на сколько угодно клеток, а не на одну, поэтому надо будет использовать другую команду. Знак $ означает то, что при растягивании формулы эта ячейка не будет меняться. Нам нужно найти максимальное число, поэтому в формуле используем команду МАКС.<br><img src="скрин149.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Растягиваем до конца.<br><img src="скрин150.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Теперь делаем то же самое, но с нижними ячейками от начальной ячейки макета.<br><img src="скрин151.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br><br><img src="скрин152.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"></li><br>
+<li>Далее в ячейку B18 надо вписать команду МАКС, которая должна выбрать максимально число по столбцам и по строкам. Для этого надо записать подобную команду.<br><img src="скрин153.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>Теперь растягиваем ее до конца таблицы<br><img src="скрин154.png" width=60% onclick="this.style.width='100%'" onmouseout="this.style.width='60%'"><br><br>В правой нижней ячейке получилось число 323, записываем ответ.</li><br></ol>
+<font size=5 face="arial"><p><i>Ответ: 323</i></p></font><br>
+
+
+<font size=4 face="times new roman" class="n"><br><br><a href="Задание 18.html" class="g"><b> Назад </b></a></font></td>
+</table>
+      <div id="clear">
+      </div>
+ </body>
+ </html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+body {background: #fff;
+        color: #000;
+        margin: 0;
+        padding: 0;
+		}	
+#шапка {background-size: cover;
+  background-image: url("типофон.png");
+        width: 100%;
+		text-align: center;
+        height: 7%;} 
+#основное {background-size: cover;
+           width: 100%;
+		  
+		   height: 95%;
+		   float: center;position: fixed;overflow-y: scroll; font-family: arial;
+}::-webkit-scrollbar {
+	width: 0px;}	
+#clear {clear: both;}		   
+</body>
+</html>
